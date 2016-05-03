@@ -15,7 +15,7 @@ jm.send('getVideos').then(val=>{
     val.forEach(videos=>{
         document.body.appendChild((()=>{
             let img=document.createElement('img')
-            img.style.width='480px'
+            //img.style.width='480px'
             img.src=`api/getCover?id=${videos._id}`
             return img
         })())

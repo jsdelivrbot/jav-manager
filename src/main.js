@@ -40,12 +40,12 @@ let srv=http.createServer((req,res)=>{
 env.config=
     JSON.parse(fs.readFileSync('config.json').toString())
 MongoClient.connect('mongodb://localhost:27017/javmanager',(err,db)=>{
-    srv.listen({
-        host:'localhost',
-        port:80
-    })
     env.db=db
     env.agent=new http.Agent({
         maxSockets:8
+    })
+    srv.listen({
+        host:'localhost',
+        port:8080
     })
 })
