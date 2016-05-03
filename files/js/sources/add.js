@@ -1,0 +1,17 @@
+require('lib/jm',jm=>{
+let
+    form=document.getElementById('form'),
+    input_name=document.getElementById('input_name'),
+    input_website=document.getElementById('input_website'),
+    input_submit=document.getElementById('input_submit')
+form.onsubmit=e=>{
+    e.preventDefault()
+    jm.send('addSource',{
+        name:input_name.value,
+        website:input_website.value
+    }).then(()=>{
+        location='sources'
+    })
+}
+input_submit.disabled=false
+})

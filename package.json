@@ -1,0 +1,14 @@
+{
+	"name":"jav-manager",
+	"version":"0.0.0",
+	"description":"JAV Manager",
+	"repository":{
+		"type":"git",
+		"url":"https://github.com/anliting/jav-manager.git"
+	},
+	"license":"MIT",
+	"dependencies":{
+		"mkdirp":	"*",
+		"mongodb":	"*"
+	}
+}
